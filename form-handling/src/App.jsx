@@ -1,25 +1,25 @@
 import React from 'react'
-import { useState } from 'react'
 
 const App = () => {
-  
-const [username, setusername] = useState("")
-const [password, setpassword] = useState("")
-const [email, setemail] = useState("")
 
-const hanleSubmit = (e) => {
-  e.preventDefault()
-  setusername('')
-  setpassword('')
-  setemail('')
-}
+  const [username, setUsername] = useState("")
+  const [password, setpassword] = useState("")   
+  const [email, setemail] = useState("") 
+
+  const handleSubmit =(e)=>{
+    e.preventDefault()
+    
+    let data = {
+      username : username,
+      password : password,
+      email : email
+    }
+    console.log(data);
+  }
 
   return (
-    <div>
-        <h1>Resistration Form </h1>
-        <form action="">
-          <input type="text" onSubmit={hanleSubmit} />
-        </form>
+    <div className='h-screen w-full'>
+
     </div>
   )
 }
