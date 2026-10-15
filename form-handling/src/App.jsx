@@ -1,31 +1,20 @@
-import React, { useState } from 'react'
+import React from "react";
 
 const App = () => {
-    const [username, setUsername] = useState("")
-    const [pass, setpass] = useState("")
-    const [data, setdata] = useState([])
-
-    const handleSubmit = (e) =>{
-        e.preventDefault();
-
-        const data = {
-            username : username,
-            pass:pass
-        }
-        setdata([...data , data])
-        console.log(data);
-        setUsername("")
-        setpass("")
-    }
-
   return (
-    <div>
-        <form action="" onSubmit={handleSubmit}>
-            <label htmlFor="">Username </label>
-            <input type="text" placeholder='Enter The Username. cla' />
-        </form>
+    <div className="flex h-screen w-full items-center justify-center bg-gra-200">
+      <form action="" className="text-shadow">
+        <label htmlFor="" className="text-xl">
+          Username{" "}
+        </label>
+        <input
+          type="text"
+          placeholder="Enter Username"
+          className="text-xl border-2 rounded"
+        />
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
