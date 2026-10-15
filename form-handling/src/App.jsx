@@ -2,23 +2,29 @@ import React, { useState } from 'react'
 
 const App = () => {
     const [username, setUsername] = useState("")
-    const [password, setPassword] = useState("")
+    const [pass, setpass] = useState("")
     const [data, setdata] = useState([])
 
     const handleSubmit = (e) =>{
-        e.preventDefault()
+        e.preventDefault();
 
-        const user = {
+        const data = {
             username : username,
-            password : password,
-        };
-        console.log(user);
-        setdata([...data , user])
-        
+            pass:pass
+        }
+        setdata([...data , data])
+        console.log(data);
+        setUsername("")
+        setpass("")
     }
 
   return (
-    <div>App</div>
+    <div>
+        <form action="" onSubmit={handleSubmit}>
+            <label htmlFor="">Username </label>
+            <input type="text" placeholder='Enter The Username.'className='text-' />
+        </form>
+    </div>
   )
 }
 
