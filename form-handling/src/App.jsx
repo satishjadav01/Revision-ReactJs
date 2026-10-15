@@ -22,7 +22,7 @@ const App = () => {
     <div>
         <form action="" onSubmit={handleSubmit}>
             <label htmlFor="">Username </label>
-            <input type="text" placeholder='Enter The Username.'className='text-' />
+            <input type="text" placeholder='Enter The Username. cla' />
         </form>
     </div>
   )
