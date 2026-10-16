@@ -1,25 +1,28 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const App = () => {
-  const [user, setuser] = useState([]);
+  const [User, setUser] = useState([]);
 
-    useEffect (()=>{
-     async function fetchUser() {
-        try {
-          const res = axios.get('https://jsonplaceholder.typicode.com/users')
-          console.log(res);
-          setuser(res.data);
-        }catch(error){
-          console.log('Error',error.message);
-        }
+  useEffect(()=>{
+    async function fetchUsers () {
+      try {
+        let res = await axios.get('https://jsonplaceholder.typicode.com/users');
+        console.log(res);
+        setUser(res.data)
+      } catch (error) {
+        console.log('error',error.message);
       }
-      fetchUser();
-    },[])
-
+    }
+    fetchUsers()
+  },[])
   return (
     <div>
-
+        <ul>
+          {User.map((u)=>{
+            <li key={u.id}>{u.name}</li>
+          })}
+        </ul>
     </div>
   )
 }
