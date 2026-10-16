@@ -34,7 +34,7 @@ const App = () => {
       </div>
       <div className="mt-6 flex items-center justify-center gap-4">
         <button
-          className="rounded bg-blue-600 px-4 py-2 text-white disabled:bg-gray-400"
+          className="rounded bg-blue-600 cursor-pointer px-4 py-2 text-white disabled:bg-gray-400"
           disabled={page === 1}
           onClick={() => setpage(page - 1)}
         >
