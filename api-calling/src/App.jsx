@@ -1,38 +1,41 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const App = () => {
-  const [users, setUsers] = useState([]);
+  const [user, setuser] = useState([])
 
-  useEffect(() => {
-    const fetchUsers = async () => {
+  useEffect(()=>{
+    async function fetchUSer(){
+      
       try {
-        const res = await axios.get(
-          "https://jsonplaceholder.typicode.com/users",
-        );
-        setUsers(res.data);
+        let res = await axios.get('https://jsonplaceholder.typicode.com/users');
+        console.log(res);
+        setuser(res.data)        
       } catch (error) {
-        console.log(error.message);
+        console.log('error',error);
       }
-    };
-
-    fetchUsers();
-  }, []);
+    }
+    fetchUSer();
+  },[])
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-3xl font-semibold text-center mb-6">User</h1>
-      <div className="grid grid-cols-1">
-        {users.map((u)=>{
-          <div>
-            <h2>{u.name}</h2>
-            <p>{u.id}</p>
-            <p>@{u.username}</p>
-          </div>
-        })}
-      </div>
-    </div>
-  );
-};
+    <div className='bg-gray-50 h-screen w-full'>
+      <h1 className='text-3xl font-bold text-center'>Users</h1>
 
-export default App;
+    <div className='grid grid-cols-1 gap-5 p-1 m-1 sm:grid-cols-2 md:grid-cols-3'>
+      {user.map((u)=>{
+          return (
+            <div key={u.id} className='rounded-lg bg-white p-4 shadow'>
+                <h2 className='font-bold'>{u.name}</h2>
+                <p>{u.id}</p>
+                <p>@{u.username}</p>
+            </div>
+          )
+      })}
+    </div>
+
+    </div>
+  )
+}
+
+export default App
