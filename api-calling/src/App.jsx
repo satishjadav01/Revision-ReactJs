@@ -17,9 +17,19 @@ const App = () => {
     fetchUsers()
   },[])
   return (
-    <div>
+    <div className='flex h-screen w-full '>
         <ul>
-          
+          {User.map((u)=>{
+            return (
+              <>
+                <li key={u.id}>{u.name}</li>
+                <li key={u.id}>{u.id}</li>
+                <li key={u.id}>{u.username}</li>
+
+              </>
+            )
+            
+          })}
         </ul>
     </div>
   )
