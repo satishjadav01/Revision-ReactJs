@@ -1,5 +1,11 @@
-function Product() {
-  return <h1 className="m-10 text-3xl">This is Product Page</h1>;
+import React from 'react'
+
+const Product = () => {
+  return (
+    <div>
+        <h1 className="m-10 text-3xl">This is Contact Page</h1>;
+    </div>
+  )
 }
 
-export default Product;
+export default Product
