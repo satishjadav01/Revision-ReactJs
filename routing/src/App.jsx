@@ -1,29 +1,32 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import { Route, Routes } from "react-router-dom";
-import Home from "./page/Home";
-import About from "./page/about";
-import ProductDetails from "./page/ProductDetails";
-import Product from "./page/Product";
-import Contact from "./page/Contact";
-import NotFound from "./page/NotFound";
+import { Link, Routes, Route } from "react-router-dom";
 
-const App = () => {
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Product from "./pages/Product";
+import Contact from "./pages/Contact";
+
+function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navbar />
+    <div>
+      <nav className="flex justify-between bg-blue-600 p-5 text-white">
+        <h1 className="text-xl font-bold">MyWebsite</h1>
+
+        <div className="flex gap-6">
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/product">Product</Link>
+          <Link to="/contact">Contact</Link>
+        </div>
+      </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/product" element = {<Product/>}/>
-        <Route path="/product/:id"
-        element={<ProductDetails/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="*" element={<NotFound/>}/>
+        <Route path="/product" element={<Product />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );
-};
+}
 
 export default App;
