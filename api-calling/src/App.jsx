@@ -13,7 +13,6 @@ const App = () => {
         let res = await axios.get("https://jsonplaceholder.typicode.com/posts")
         console.log(res);
         setuser(res.data)
-
       } catch (error) {
         console.log('error',error);
       }

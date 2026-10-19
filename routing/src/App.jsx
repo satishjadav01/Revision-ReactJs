@@ -1,5 +1,4 @@
 import { Link, Routes, Route } from "react-router-dom";
-
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Product from "./pages/Product";
@@ -9,8 +8,7 @@ function App() {
   return (
     <div>
       <nav className="flex justify-between bg-blue-600 p-5 text-white">
-        <h1 className="text-xl font-bold">MyWebsite</h1>
-
+        <h1 className="text-xl font-bold">MyWebsite</h1> 
         <div className="flex gap-6">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
