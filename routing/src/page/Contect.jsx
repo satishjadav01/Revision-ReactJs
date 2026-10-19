@@ -2,7 +2,9 @@ import React from 'react'
 
 const Contect = () => {
   return (
-    <div>Contect</div>
+    <div>
+      <h1>Contect</h1>
+    </div>
   )
 }
 
