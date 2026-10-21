@@ -5,7 +5,7 @@ const App = () => {
 const [num, setNum] = useState(10);
 
 function changeV() {
-  setNum(30)
+  setNum(30);
 }
 
   return (
