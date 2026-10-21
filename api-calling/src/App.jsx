@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axois from 'axios';
-import axios from 'axios'
+import axios from 'axios';
 
 const App = () => {
 
