@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const App = () => {
 
-  const [user, setuser] = useState([])
+  const [user, setuser] = useState([]);
 
   useEffect(()=>{
 
@@ -31,7 +31,7 @@ const App = () => {
                 <h2>{u.userId}</h2>
                 <p>{u.title}</p>
             </div>
-          )
+          );
         })}
       </div>
     </div>
