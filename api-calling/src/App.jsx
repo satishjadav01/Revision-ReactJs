@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axois from 'axios'
+import axois from 'axios';
 import axios from 'axios'
 
 const App = () => {
