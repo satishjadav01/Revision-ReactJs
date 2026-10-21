@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const App = () => {
   
-const [num, setNum] = useState(10)
+const [num, setNum] = useState(10);
 
 function changeV() {
   setNum(30)
