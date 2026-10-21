@@ -10,7 +10,7 @@ const App = () => {
 
     async function fetchUserdata(){
       try {
-        let res = await axios.get("https://jsonplaceholder.typicode.com/posts")
+        let res = await axios.get("https://jsonplaceholder.typicode.com/posts");
         console.log(res);
         setuser(res.data);
       } catch (error) {
