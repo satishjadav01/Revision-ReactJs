@@ -34,7 +34,7 @@ const App = () => {
           </nav>
           <h1></h1>
         </section>
-      </header>
+      </header> 
     </div>
   );
 };
