@@ -6,59 +6,46 @@ const App = () => {
   const [data, setdata] = useState([]);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.prevetDefault();
 
     const userData = {
       username: username,
       password: password,
     };
-    setdata([...data, userData]);
-    // console.log(res);
+    data([...setdata, userData]);
+
     setusername("");
     setpassword("");
-    console.log(userData);
   };
 
   return (
-    <div className="flex h-screen w-full justify-center items-center flex-col bg-amber-50 ">
-      <form action="" onSubmit={handleSubmit}>
-        <div className="flex justify-center flex-col gap-1 shadow-2xl rounded h-100 w-100 p-2 m-1">
-          <h1 className="text-4xl font-bold text-center">Login</h1>
-          <label htmlFor="" className="text-xl ">
+    <div className="flex items-center justify-center h-screen w-full bg-amber-100">
+      <form action="">
+        <div className="flex flex-col justify-center shadow-2xl h-100 w-120 m-2 p-5 gap-2">
+          <h1 className="text-3xl font-bold text-center">Login</h1>
+          <label htmlFor="" className="text-xl">
             Username
           </label>
           <input
             type="text"
-            placeholder="Enter The Username  "
+            placeholder="enter username"
             className="text-xl border-2 rounded m-1 p-1"
-            value={username}
-            onChange={(e) => setusername(e.target.value)}
           />
-          <label htmlFor="" className="text-xl ">
+
+          <label htmlFor="" className="text-xl">
             Password
           </label>
           <input
             type="password"
-            placeholder="Enter The Password  "
-            className="text-xl border-2 rounded p-1 m-1 "
-            value={password}
-            onChange={(e) => setpassword(e.target.value)}
+            placeholder="enter password"
+            className="text-xl border-2 rounded m-1 p-1"
           />
-          <button className="h-9 border-2 w-95 cursor-pointer p-1 m-1 rounded-xl text-x bg-olive-500 hover:bg-olive-300 mt-6 hover:scale-95 ">
-            Submit
+
+          <button className="h-9 mt-6 border m-1 p-1 text-xl rounded cursor-pointer bg-amber-200 border-none hover:bg-amber-300 hover:scale-95">
+            submit
           </button>
         </div>
       </form>
-      {data.map((u, index) => {
-        return (
-          <>
-            <div key={index}>
-              <p>Username : {u.username}</p>
-              <p>Password : {u.password}</p>
-            </div>
-          </>
-        );
-      })}
     </div>
   );
 };
