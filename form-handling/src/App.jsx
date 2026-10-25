@@ -16,25 +16,25 @@ const App = () => {
     setusername("");
     setpassword("");
     console.log(userData);
-  };
-
+  }; 
+ 
   return (
     <div className="flex justify-center items-center w-full h-screen bg-amber-50">
       <form action="" onSubmit={handleSubmit}>
         <div className="flex flex-col justify-center shadow-2xl h-100 w-120 m-5 p-1 bg-amber-100">
           <h1 className="font-bold text-3xl text-center"> Login</h1>
           <label htmlFor="" className="text-xl p-1 m-1">
-            Username
-          </label>
+            Username 
+          </label> 
           <input
             type="text"
             placeholder="enter username"
             className="text-xl border-2 p-1 m-2 rounded"
-            value={username}
+            value={username} 
             onChange={(e) => setusername(e.target.value)}
-          />  
+          />   
           <label htmlFor="" className="text-xl p-1 m-1"> 
-            Password
+            Password 
           </label>
           <input
             type="password"   
