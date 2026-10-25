@@ -6,21 +6,24 @@ const App = () => {
   const [data, setdata] = useState([]);
 
   const handleSubmit = (e) => {
-    e.prevetDefault();
+    e.preventDefault()
 
     const userData = {
       username: username,
       password: password,
     };
-    data([...setdata, userData]);
+
+    setdata([...data, userData]);
 
     setusername("");
     setpassword("");
+
+    console.log(userData);
   };
 
   return (
     <div className="flex items-center justify-center h-screen w-full bg-amber-100">
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <div className="flex flex-col justify-center shadow-2xl h-100 w-120 m-2 p-5 gap-2">
           <h1 className="text-3xl font-bold text-center">Login</h1>
           <label htmlFor="" className="text-xl">
@@ -30,6 +33,8 @@ const App = () => {
             type="text"
             placeholder="enter username"
             className="text-xl border-2 rounded m-1 p-1"
+            value={username}
+            onChange={(e)=>setusername(e.target.value)}
           />
 
           <label htmlFor="" className="text-xl">
@@ -39,6 +44,8 @@ const App = () => {
             type="password"
             placeholder="enter password"
             className="text-xl border-2 rounded m-1 p-1"
+            value={password}
+            onChange={(e)=>setpassword(e.target.value)}
           />
 
           <button className="h-9 mt-6 border m-1 p-1 text-xl rounded cursor-pointer bg-amber-200 border-none hover:bg-amber-300 hover:scale-95">
