@@ -16,7 +16,7 @@ const App = () => {
     }
     fetchUserdata();
   }, []);
-  
+    
   return (
     <div>
       {data.map((u, index) => {
