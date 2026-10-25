@@ -41,9 +41,9 @@ const App = () => {
             placeholder="enter password"
             className="text-xl border-2 p-1 m-2 rounded" 
             value={password}
-            onChange={(e) => setpassword(e.target.value)}
+            onChange={(e) => setpassword(e.target.value)} 
           />
-          <button className="h-10   bg-amber-300 m-1 p-1 rounded cursor-pointer hover:bg-amber-400 hover:scale-95 mt-5">
+          <button className="h-10   bg-amber-300 m-1 p-1 rounde d cursor-pointer hover:bg-amber-400 hover:scale-95 mt-5">
             submit
           </button>
         </div>
