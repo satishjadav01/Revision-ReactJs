@@ -10,7 +10,6 @@ useEffect(()=>{
       const res = axios.get('https://dummyjson.com/users')
       console.log(res);
       
-      
     }
 },[])
 
