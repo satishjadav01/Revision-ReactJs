@@ -6,9 +6,9 @@ const App = () => {
 const [data, setdata] = useState([])
 
 useEffect(()=>{
-  function fetchUserdata() {
+  async function fetchUserdata() {
     try {
-      let res = axios.get('https://dummyjson.com/users')
+      let res = await axios.get('https://dummyjson.com/users')
       console.log(res);
       setdata(res.data)
     } catch (error) {
@@ -20,7 +20,11 @@ useEffect(()=>{
 
   return (
     <div>
-      
+      {data.map((u,index)=>{
+        <div>
+          
+        </div>
+      })}
     </div>
   )
 }
