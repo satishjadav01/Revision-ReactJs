@@ -6,7 +6,7 @@ const App = () => {
   const [data, setdata] = useState([]);
  
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
  
     const userData = {
       username: username,
