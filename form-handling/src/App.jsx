@@ -11,13 +11,13 @@ const App = () => {
     const userData = {
       username: username,
       password: password,
-    };
+    };  
     setdata([...data, userData]);
     setusername("");
     setpassword("");
     console.log(userData);
   }; 
-  
+
   return (
     <div className="flex justify-center items-center w-full h-screen bg-amber-50">
       <form action="" onSubmit={handleSubmit}>
