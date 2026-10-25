@@ -37,9 +37,9 @@ const App = () => {
             Password
           </label>
           <input
-            type="password"
+            type="password"  
             placeholder="enter password"
-            className="text-xl border-2 p-1 m-2 rounded"
+            className="text-xl border-2 p-1 m-2 rounded" 
             value={password}
             onChange={(e) => setpassword(e.target.value)}
           />
