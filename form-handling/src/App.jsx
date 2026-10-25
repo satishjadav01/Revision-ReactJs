@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  const [username, setusername] = useState("");
 
-export default App
+  return (
+    <div className="">
+      <h1>Form Handling in React Js</h1>
+      <form action="">
+        <label htmlFor=""> Username
+          <input type="text"  />
+        </label>
+      </form>
+    </div>
+  );
+};
+
+export default App;
