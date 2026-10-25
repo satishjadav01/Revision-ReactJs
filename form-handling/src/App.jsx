@@ -12,12 +12,11 @@ const App = () => {
       username: username,
       password: password,
     };
-     setdata([...data,userData])
+    setdata([...data, userData]);
     // console.log(res);
-    setusername("")
-    setpassword("")
+    setusername("");
+    setpassword("");
     console.log(userData);
-    
   };
 
   return (
@@ -33,7 +32,7 @@ const App = () => {
             placeholder="Enter The Username  "
             className="text-xl border-2 rounded m-1 p-1"
             value={username}
-            onChange={(e)=>setusername(e.target.value)}
+            onChange={(e) => setusername(e.target.value)}
           />
           <label htmlFor="" className="text-xl ">
             Password
@@ -43,19 +42,23 @@ const App = () => {
             placeholder="Enter The Password  "
             className="text-xl border-2 rounded p-1 m-1 "
             value={password}
-            onChange={(e)=>setpassword(e.target.value)}
+            onChange={(e) => setpassword(e.target.value)}
           />
           <button className="h-9 border-2 w-95 cursor-pointer p-1 m-1 rounded-xl text-x bg-olive-500 hover:bg-olive-300 mt-6 hover:scale-95 ">
             Submit
           </button>
-
         </div>
       </form>
-        {data.map((u,index)=>{
-          <div>
-            
-          </div>
-        })}
+      {data.map((u, index) => {
+        return (
+          <>
+            <div key={index}>
+              <p>Username : {u.username}</p>
+              <p>Password : {u.password}</p>
+            </div>
+          </>
+        );
+      })}
     </div>
   );
 };
