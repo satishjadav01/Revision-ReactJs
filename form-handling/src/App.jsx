@@ -31,7 +31,7 @@ const App = () => {
             placeholder="enter username"
             className="text-xl border-2 p-1 m-2 rounded"
             value={username}
-            onChange={(e)=>setusername(e.target.value)}
+            onChange={(e) => setusername(e.target.value)}
           />
           <label htmlFor="" className="text-xl p-1 m-1">
             Password
@@ -41,12 +41,22 @@ const App = () => {
             placeholder="enter password"
             className="text-xl border-2 p-1 m-2 rounded"
             value={password}
-            onChange={(e)=>setpassword(e.target.value)}
+            onChange={(e) => setpassword(e.target.value)}
           />
           <button className="h-10   bg-amber-300 m-1 p-1 rounded cursor-pointer hover:bg-amber-400 hover:scale-95 mt-5">
             submit
           </button>
         </div>
+        {data.map((u, index) => {
+          return (
+            <>
+              <div key={index}>
+                <p className="">{u.username}</p>
+                <p className="">{u.password}</p>
+              </div>
+            </>
+          );
+        })}
       </form>
     </div>
   );
