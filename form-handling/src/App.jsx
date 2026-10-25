@@ -32,7 +32,7 @@ const App = () => {
             className="text-xl border-2 p-1 m-2 rounded"
             value={username}
             onChange={(e) => setusername(e.target.value)}
-          />
+          />  
           <label htmlFor="" className="text-xl p-1 m-1">
             Password
           </label>
