@@ -48,9 +48,9 @@ const App = () => {
           </button>
         </div>
         {data.map((u, index) => {
-          return (
-            <>
-              <div key={index}>
+          return ( 
+            <> 
+              <div key={index}> 
                 <p className="">{u.username}</p>
                 <p className="">{u.password}</p>
               </div>
