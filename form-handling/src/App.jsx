@@ -48,8 +48,14 @@ const App = () => {
           <button className="h-9 border-2 w-95 cursor-pointer p-1 m-1 rounded-xl text-x bg-olive-500 hover:bg-olive-300 mt-6 hover:scale-95 ">
             Submit
           </button>
+
         </div>
       </form>
+        {data.map((u,index)=>{
+          <div>
+            
+          </div>
+        })}
     </div>
   );
 };
