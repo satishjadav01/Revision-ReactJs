@@ -10,13 +10,13 @@ const App = () => {
         COUNTER :{" "} 
         <span className="text-3xl font-extrabold text-red-500">{count}</span>
       </h1>
-      <div className="h-100 w-120 items-center justify-center flex absolute mt-45 m-1 p-2 shadow-2xl">  
-        <button 
+      <div className="h-100 w-120 items-center justify-center flex absolute mt-45 m-1 p-2 shadow-2xl">    
+        <button   
           className="h-9 w-47 text-xl p-1 m-1 bg-amber-300 rounded-xl cursor-pointer hover:scale-95 hover:bg-amber-400
-        "  
+        "   
           onClick={() => setcount(count + 1)}
-        >   
-          Increment   
+        >     
+          Increment      
         </button>   
         <button
           className="h-9 w-47 text-xl p-1 m-1 bg-amber-300 rounded-xl cursor-pointer hover:scale-95 hover:bg-amber-400"   
