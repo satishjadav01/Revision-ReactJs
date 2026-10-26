@@ -7,7 +7,7 @@ const App = () => {
 
 const [data, setdata] = useState("")
 const [loading, setloading] = useState(true)
-
+   
 useEffect(()=>{
 
 const fetchUsers =async () => {
