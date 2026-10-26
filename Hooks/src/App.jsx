@@ -26,7 +26,7 @@ const App = () => {
         </button>
         <button
           className="h-9 w-47 text-xl p-1 m-1 bg-amber-300 rounded-xl cursor-pointer hover:scale-95 hover:bg-amber-400"
-          onClick={() => setcount(0)}
+          onClick={() => setcount(0)} 
         > 
           Reset
         </button>
