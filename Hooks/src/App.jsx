@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
 const App = () => {
+  
   const [count, setcount] = useState(0);
-
+ 
   return (
     <div className="h-screen w-full flex items-center justify-center relative bg-amber-50">
       <h1 className="text-2xl font-semibold ">
