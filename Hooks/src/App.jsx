@@ -1,19 +1,20 @@
-import React, { useState } from "react";
+import React from 'react'
+import { useState } from 'react'
 
 const App = () => {
-  
-const [num, setNum] = useState(10);
 
-function changeV() {
-  setNum(30);
-}
+const [count, setcount] = useState([])
 
   return (
     <div>
-      <h1>value of A {num}</h1>
-      <button onClick={changeV}>click</button>
+      <form action="">
+        <h1>count : {count}</h1>
+        <div>
+          
+        </div>
+      </form>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
