@@ -3,17 +3,20 @@ import React, { useState } from "react";
 const App = () => {
   const [username, setusername] = useState("");
   const [password, setpassword] = useState("");
-  const [data, setdata] = useState([])
+  const [data, setdata] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const userData = {
-      username:username,
-      password:password
-    }
-    setdata([...data , userData])
-    console.log(setdata);
+      username: username,
+      password: password,
+    };
+    setdata([...data, userData]);
+    console.log(userData);
+
+    setusername("");
+    setpassword("");
   };
 
   return (
@@ -28,7 +31,7 @@ const App = () => {
             className="text-xl border-2 rounded m-1 p-1"
             placeholder="Enter Username"
             value={username}
-            onChange={(e)=>setusername(e.target.value)}
+            onChange={(e) => setusername(e.target.value)}
           />
           <label htmlFor="" className="text-xl mr-37">
             Password
@@ -38,7 +41,7 @@ const App = () => {
             className="text-xl border-2 rounded m-1 p-1"
             placeholder="Enter Password"
             value={password}
-            onChange={(e)=>setpassword(e.target.value)}
+            onChange={(e) => setpassword(e.target.value)}
           />
           <button className="h-10 border-2 w-60 rounded-2xl hover:scale-95 mt-7 cursor-pointer bg-amber-600 hover:bg-amber-700 text-white">
             submit
