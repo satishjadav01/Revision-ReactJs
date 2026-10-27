@@ -10,6 +10,7 @@ const App = () => {
         const res = await axios.get(
           "https://jsonplaceholder.typicode.com/users",
         );
+        setuser(res.data);
         console.log(res.data);
       } catch (error) {
         console.log(error);
@@ -20,14 +21,14 @@ const App = () => {
 
   return (
     <div>
-      {user.map((u)=>{
-        return(
+      {user.map((u) => {
+        return (
           <div key={u.id}>
-              <p>{u.id}</p>
-              <p>{u.name}</p>
-              <p>{u.id}</p>
+            <p>{u.id}</p>
+            <p>{u.name}</p>
+            <p>{u.username}</p>
           </div>
-        )
+        );
       })}
     </div>
   );
