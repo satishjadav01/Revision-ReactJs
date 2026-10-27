@@ -1,25 +1,33 @@
-import React, { use, useState } from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
 
-const [search, setsearch] = useState("")
+const [serch, setserch] = useState("")
 
-const users = ["satihs", "sanjay" , "sureshbhai" , "shantuben"]
+const users = ["satish", "sanjay" , "papa" , "mummy"]
 
-const filteredUsers = users.filter((user)=>{
-  user.toUpperCase().includes(search.toLowerCase())
+const hanleSearch =(e)=>{
+  setserch(e.target.value)
+}
+
+const filterUsers = users.filter((user)=>{
+  return user.toLowerCase().includes(serch.toLowerCase())
 });
+
+const displayUsers = () =>{
+  return filterUsers.map((user)=>{
+    return <p key={user}>{user}</p>
+  });
+};
 
   return (
     <div>
       <input type="text"
-      value={search} 
-      onChange={(e)=>setsearch(e.target.value)}
-      placeholder='serach hare '/>
+      value={serch}
+      onChange={hanleSearch}
+      placeholder='search user' />
 
-      {filteredUsers.map((user)=>{
-        <p key={user}>{user}</p>
-      })}
+      {displayUsers()}
     </div>
   )
 }
