@@ -27,7 +27,10 @@ const App = () => {
         placeholder="search here.."
         onChange={handleSubmit}
       />
-        {displayUsers()}
+
+      {serachFilter.map((s) => {
+        return <p key={s}>{users}</p>;
+      })}
     </div>
   );
 };
