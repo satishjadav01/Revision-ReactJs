@@ -3,26 +3,26 @@ import React, { useState } from "react";
 const App = () => {
   const [search, setsearch] = useState("");
 
-  const users = ["abc", "satihs", "jadav", "asdsadf","SATISH"];
+  const products = ["dress", "kurta", "t-shirt", "ring"];
 
   const handleSearch = (e) => {
     setsearch(e.target.value);
   };
 
-  const searchFilter = users.filter((user) => {
-    return user.toLowerCase().includes(search.toLowerCase());
+  const searchFilter = products.filter((product) => {
+    return product.toLowerCase().includes(product.toLowerCase());
   });
 
   return (
     <div>
       <input
         type="text"
-        placeholder="search hare..."
         value={search}
+        placeholder="search here.."
         onChange={handleSearch}
       />
-      {searchFilter.map((user) => {
-        return <p key={user}>{user}</p>;
+      {searchFilter.map((product)=>{
+        <p key={product}>{product}</p>
       })}
     </div>
   );
