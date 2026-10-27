@@ -13,7 +13,7 @@ const App = () => {
         setuser(res.data);
         console.log(res.data);
       } catch (error) {
-        console.log(error);
+        console.log(error); 
       }
     };
     fetchUserData();
