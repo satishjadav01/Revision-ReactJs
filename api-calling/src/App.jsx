@@ -1,27 +1,27 @@
-import { useState } from "react";
+import React, { use, useState } from 'react'
 
 const App = () => {
-  const [search, setSearch] = useState("");
 
-  const users = ["Rahul", "Amit", "Priya", "Neha"];
+const [search, setsearch] = useState("")
 
-  const filteredUsers = users.filter((user) =>
-    user.toLowerCase().includes(search.toLowerCase())
-  );
+const users = ["satihs", "sanjay" , "sureshbhai" , "shantuben"]
+
+const filteredUsers = users.filter((user)=>{
+  user.toUpperCase().includes(search.toLowerCase())
+});
 
   return (
     <div>
-      <input
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        placeholder="Search user"
-      />
+      <input type="text"
+      value={search} 
+      onChange={(e)=>setsearch(e.target.value)}
+      placeholder='serach hare '/>
 
-      {filteredUsers.map((user) => (
+      {filteredUsers.map((user)=>{
         <p key={user}>{user}</p>
-      ))}
+      })}
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
