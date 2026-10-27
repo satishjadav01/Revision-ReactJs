@@ -10,7 +10,7 @@ const App = () => {
   };
 
   const searchFilter = products.filter((product) => {
-    return product.toLowerCase().includes(product.toLowerCase());
+    return product.toLowerCase().includes(search.toLowerCase());
   });
 
   return (
@@ -22,7 +22,7 @@ const App = () => {
         onChange={handleSearch}
       />
       {searchFilter.map((product)=>{
-        <p key={product}>{product}</p>
+        return <p key={product}>{product}</p>
       })}
     </div>
   );
