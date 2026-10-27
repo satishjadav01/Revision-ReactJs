@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
+
+const [first, setfirst] = useState(second)
+
   return (
-    <div>App</div>
+    <div>
+
+    </div>
   )
 }
 
