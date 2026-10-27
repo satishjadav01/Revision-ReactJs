@@ -2,7 +2,11 @@ import React, { useState } from 'react'
 
 const App = () => {
 
-const [first, setfirst] = useState(second)
+const [search, setsearch] = useState("")
+
+const user = ["satish","sanjay","jayraj","Darshan"]
+
+const filterUsers = 
 
   return (
     <div>
