@@ -10,7 +10,6 @@ const hanleSearch =(e)=>{
   setserch(e.target.value)
 }
 
-
 const displayUsers = () =>{
   return filterUsers.map((user)=>{
     return <p key={user}>{user}</p>
