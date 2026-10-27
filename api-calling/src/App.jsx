@@ -1,38 +1,31 @@
-import React, { use, useState } from "react";
+import React, { useState } from 'react'
 
 const App = () => {
-  const [serach, setserach] = useState("");
 
-  const user = ["satish", "sureshbhai", "jadav", "Nayan"];
+const [search, setsearch] = useState("")
 
-  const handleSubmit = (e) => {
-    setserach(e.target.value);
-  };
+const users = ["abc","satihs","jadav","asdsadf"]
 
-  const serachFilter = user.filter((users) => {
-    return users.toUpperCase().includes(users.toLocaleLowerCase());
-  });
+const handleSearch =(e)=>{
+  setsearch(e.target.value)
+}
 
-  const displayUsers = () => {
-    return serachFilter.map((user) => {
-      return <p key={user}>{user}</p>;
-    });
-  };
+const searchFilter = users.filter((user)=>{
+  return user.toLowerCase().includes(search.toUpperCase())
+})
 
   return (
     <div>
-      <input
-        type="text"
-        value={serach}
-        placeholder="search here.."
-        onChange={handleSubmit}
-      />
-
-      {serachFilter.map((s) => {
-        return <p key={s}>{users}</p>;
-      })}
+      <input type="text"
+      placeholder='search hare...'
+      value={search}
+      onChange={handleSearch}
+       />
+       {searchFilter.map((user)=>{
+        return <p key={user}>{user}</p>
+       })}
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
