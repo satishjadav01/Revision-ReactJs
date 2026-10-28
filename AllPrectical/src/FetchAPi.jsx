@@ -21,19 +21,19 @@ const FetchAPi = () => {
         setloading(false);
       }
       if (loading) return <p>Loadig....</p>;
-      if (error) return <p>{error}</p>;
-    };
+      if (error) return <p>{error}</p>;  
+    };  
     fetchUserData();
   }, []);
 
-  return (
+  return (  
     <div>
      {users.map((user)=>{
-        return (<div key={user.id}>
+        return (<div key={user.id}> 
             <p>Id : {user.id}</p>
             <p>Name : {user.name}</p>
-            <p>Address : {user.address.street}</p>
-        </div>)
+            <p>Address : {user.address.street}</p>  
+        </div>)  
      })} 
     </div>
   );
