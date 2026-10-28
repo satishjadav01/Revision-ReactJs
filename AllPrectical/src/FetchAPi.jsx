@@ -14,7 +14,7 @@ const FetchAPi = () => {
         );
         // console.log(res);
         setusers(res.data);
-        console.log(.data);
+        console.log(res.data);
       } catch (error) {
         console.log(error);
       } finally {
