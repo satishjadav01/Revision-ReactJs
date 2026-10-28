@@ -21,7 +21,7 @@ const FormHandle = () => {
   };
 
   return (
-    <div className="h-screen w-full flex justify-center items-center ">
+    <div className="h-screen w-full flex justify-center items-center  ">
       <form action="" onSubmit={handleSubmit}>
         <div className="h-100 w-120 flex flex-col justify-center items-center">
           <label htmlFor="" className="text-xl font-bold">
