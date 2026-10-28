@@ -34,7 +34,7 @@ const FetchAPi = () => {
             <p>Name : {user.name}</p>
             <p>Address : {user.address.street}</p>
         </div>)
-     })}
+     })} 
     </div>
   );
 };
