@@ -6,11 +6,13 @@ import FetchAPi from './FetchAPi';
 import SearchFilter from './SearchFilter';
 import FormHandle from './FormHandle';
 import ShowHidePassword from './ShowHidePassword';
+import Todo from './Todo';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <State/>
   // <FetchAPi/>
   // <SearchFilter/>
   // <FormHandle/>
-  <ShowHidePassword/>
+  // <ShowHidePassword/>
+  <Todo/>
 )
