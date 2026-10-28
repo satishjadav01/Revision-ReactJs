@@ -1,27 +1,22 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 const ShowHidePassword = () => {
-  const [password, setpassword] = useState("");
-  const [showPassword, setshowPassword] = useState(false);
+
+const [password, setPassword] = useState("")
+const [showPassword, setshowPassword] = useState(false)
 
   return (
     <div>
-      <input
-        type={showPassword ? "text" : "password"}
-        className="border rounded m-1 p-1"
-        placeholder="Enter password"
+        <input type="text"
         value={password}
-        onChange={(e) => setpassword(e.target.value)}
-      />
-
-      <button
-        onClick={() => setshowPassword((prev) => !prev)}
-        className="h-10 rounded w-25 text-center m-1 p-1 bg-amber-300"
-      >
-        {showPassword ? "hide" : "show"}
-      </button>
+        onChange={(e)=>setPassword(e.target.value)}
+        placeholder='Enter password'
+         />
+        <button onClick={()=>setPassword((prev)=>!prev)}>
+            {setPassword ? "hide" : "show"}
+        </button>
     </div>
-  );
-};
+  )
+}
 
-export default ShowHidePassword;
+export default ShowHidePassword
