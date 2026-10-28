@@ -14,7 +14,9 @@ const App = () => {
     };
     setdata([...data, userData]);
     console.log(userData);
-    
+
+    setusername("");
+    setpassword("");
   };
 
   return (
