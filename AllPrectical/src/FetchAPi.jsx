@@ -37,8 +37,8 @@ const FetchAPi = () => {
           </div>
         ); 
       })}
-    </div>
-  );
+    </div> 
+  );  
 };
 
-export default FetchAPi;
+export default FetchAPi; 
