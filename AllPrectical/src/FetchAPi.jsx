@@ -28,14 +28,13 @@ const FetchAPi = () => {
 
   return (
     <div>
-      {users.map((user) => {
-         return 
-         <>
-         <div >
-                
-         </div>
-         </>
-      })}
+     {users.map((user)=>{
+        return (<div key={user.id}>
+            <p>Id : {user.id}</p>
+            <p>Name : {user.name}</p>
+            <p>Address : {user.address.street}</p>
+        </div>)
+     })}
     </div>
   );
 };
