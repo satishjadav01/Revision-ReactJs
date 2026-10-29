@@ -8,8 +8,8 @@ import ProductDetails from "./pages/ProductDetails";
 import Contact from "./pages/Contact";
 
 const App = () => {  
-  return (   
-    <Routes>
+  return (     
+    <Routes>  
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} /> 
         <Route path="about" element={<About />} />
