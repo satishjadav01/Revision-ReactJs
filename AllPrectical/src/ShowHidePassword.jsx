@@ -6,7 +6,7 @@ const ShowHidePassword = () => {
 
   return (
     <div>
-      <input
+      <input 
         type={showPassword ? "text" : "password"}
         className="border p-1 m-1 font-bold "
         placeholder="Enter password"
