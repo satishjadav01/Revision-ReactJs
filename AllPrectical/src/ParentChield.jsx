@@ -11,8 +11,8 @@ const App = () => {
   return (
     <div>
       <User name="Satish" email="satish@example.com" />
-    </div>
+    </div>  
   );
-};
+};  
 
 export default App;
