@@ -16,10 +16,10 @@ const App = () => {
         <Route path="products" element={<Products />} />
         <Route path="products/:id" element={<ProductDetails />} /> 
         <Route path="contact" element={<Contact />} /> 
-      </Route> 
+      </Route>   
     </Routes>
   ); 
-}; 
+};  
 
 export default App;
  
