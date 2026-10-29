@@ -17,8 +17,8 @@ const App = () => {
         <Route path="products/:id" element={<ProductDetails />} />  
         <Route path="contact" element={<Contact />} />  
       </Route>
-    </Routes>
+    </Routes>  
   );
 };
-
-export default App;
+  
+export default App;  
