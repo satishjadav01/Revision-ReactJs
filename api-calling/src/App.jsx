@@ -19,7 +19,7 @@ useEffect(()=>{
   }
   fetchUserData()
 },[])
-
+   
   return (
     <div>
       {user.map((u)=>{
