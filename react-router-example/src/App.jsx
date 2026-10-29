@@ -7,8 +7,8 @@ import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
 import Contact from "./pages/Contact";
 
-const App = () => {
-  return (
+const App = () => {  
+  return (   
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} /> 
