@@ -12,7 +12,7 @@ const handleAdd=()=>{
 const handleDelete=(index)=>{
   settasks(task.filter((_,i)=> i !== index));
 }
-
+  
   return (
     <div>
       <input type="text"
