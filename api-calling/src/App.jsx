@@ -6,9 +6,9 @@ const [user, setuser] = useState([])
 
    
  useEffect(()=>{
-   const fetchUserData =async()=>{
+ const fetchUserData =async()=>{
     try {
-      const res = await axios.get('https://jsonplaceholder.typicode.com/users')
+       const res = await axios.get('https://jsonplaceholder.typicode.com/users')
       setuser(res.data)
       console.log(res.data);
       
