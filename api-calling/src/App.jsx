@@ -5,6 +5,8 @@ const App = () => {
 
 const [user, setuser] = useState([])
 
+
+
 useEffect(()=>{
   const fetchUserData =async()=>{
     try {
