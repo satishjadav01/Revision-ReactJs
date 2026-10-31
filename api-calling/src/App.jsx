@@ -16,9 +16,9 @@ useEffect(()=>{
       console.log(`${error} "faild to fetch`);
       
     }
-  }
+  } 
   fetchUserData()
-},[])
+},[]) 
     
   return (
     <div>
