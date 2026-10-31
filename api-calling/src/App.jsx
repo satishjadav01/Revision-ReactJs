@@ -4,9 +4,9 @@ import axios from 'axios';
 const App = () => {
 const [user, setuser] = useState([])
 
-  
-useEffect(()=>{
-  const fetchUserData =async()=>{
+   
+ useEffect(()=>{
+   const fetchUserData =async()=>{
     try {
       const res = await axios.get('https://jsonplaceholder.typicode.com/users')
       setuser(res.data)
