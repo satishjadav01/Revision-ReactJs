@@ -6,4 +6,4 @@ import SearchProduct from './SearchProduct';
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <App/>
   <SearchProduct/>
-)           
+)            
