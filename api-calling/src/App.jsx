@@ -9,8 +9,8 @@ const [user, setuser] = useState([])
  const fetchUserData =async()=>{
     try {
        const res = await axios.get('https://jsonplaceholder.typicode.com/users')
-      setuser(res.data)
-      console.log(res.data);
+        setuser(res.data)
+        console.log(res.data);
       
     } catch (error) {
       console.log(`${error} "faild to fetch`);
