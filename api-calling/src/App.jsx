@@ -14,9 +14,9 @@ const App = () => {
         console.log(res.data);
       } catch (error) {
         console.log(`${error} "faild to fetch`);
-      }    
-    }; 
-    fetchUserData(); 
+      }
+    };
+    fetchUserData();
   }, []);
 
   return (
