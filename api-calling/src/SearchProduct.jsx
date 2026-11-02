@@ -10,7 +10,7 @@ const SearchProduct = () => {
     return product.toLowerCase().includes(search.toLowerCase());
   });
 
-  return (
+  return ( 
     <div>
       <input
         type="text"
