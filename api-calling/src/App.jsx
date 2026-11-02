@@ -19,7 +19,7 @@ const App = () => {
     fetchUserData();
   }, []);
 
-  return (                               
+  return (
     <div>
       {user.map((u) => {
         return (
@@ -29,10 +29,9 @@ const App = () => {
             <p>{u.email}</p>
           </div>
         );
-      })}  
-    </div>  
-  );  
-}; 
- 
+      })}
+    </div>
+  );
+};
+
 export default App;
-   
