@@ -29,10 +29,10 @@ const App = () => {
             <p>{u.email}</p>
           </div>
         );
-      })}
-    </div>
-  );
-};
-
-export default App;
+      })}  
+    </div>  
+  );  
+}; 
  
+export default App;
+   
