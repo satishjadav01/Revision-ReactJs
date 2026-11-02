@@ -1,33 +1,33 @@
-import React from "react";
-import { useState } from "react";
+  import React from "react";
+  import { useState } from "react";
 
-const SearchProduct = () => {
-  const [search, setsearch] = useState("");
+  const SearchProduct = () => {
+    const [search, setsearch] = useState("");
 
-  const products = ["dress", "sari", "kurta", "t-shirt"];
+    const products = ["dress", "sari", "kurta", "t-shirt"];
 
-  const fulterProduct = products.filter((product) => {
-    return product.toLowerCase().includes(search.toLowerCase());
-  });
+    const fulterProduct = products.filter((product) => {
+      return product.toLowerCase().includes(search.toLowerCase());
+    });
 
-  return ( 
-    <div>
-      <input
-        type="text"
-        value={search}
-        onChange={(e) => setsearch(e.target.value)}
-        placeholder="search here.."
-      />
+    return ( 
+      <div>
+        <input
+          type="text"
+          value={search}
+          onChange={(e) => setsearch(e.target.value)}
+          placeholder="search here.."
+        />
 
-      {fulterProduct.map((product) => {
-        return (
-          <div key={product}>
-            <p>{product}</p>
-          </div>
-        );
-      })}
-    </div>
-  );
-};
+        {fulterProduct.map((product) => {
+          return (
+            <div key={product}>
+              <p>{product}</p>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
 
-export default SearchProduct;
+  export default SearchProduct;
